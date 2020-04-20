@@ -1,0 +1,67 @@
+﻿  VerticeNormal.cpp
+  tallo.cpp
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\tallo.cpp(32): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  TAfin.cpp
+  Rueda.cpp
+  Roble.cpp
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\roble.cpp(64): warning C4305: '+=': truncamiento de 'double' a 'GLfloat'
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\roble.cpp(65): warning C4305: '+=': truncamiento de 'double' a 'GLfloat'
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\roble.cpp(66): warning C4305: '+=': truncamiento de 'double' a 'GLfloat'
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\roble.cpp(73): warning C4305: '-=': truncamiento de 'double' a 'GLfloat'
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\roble.cpp(74): warning C4305: '-=': truncamiento de 'double' a 'GLfloat'
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\roble.cpp(75): warning C4305: '-=': truncamiento de 'double' a 'GLfloat'
+  PuntoVector3D.cpp
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\puntovector3d.cpp(42): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\puntovector3d.cpp(43): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\puntovector3d.cpp(44): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  Polos.cpp
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\polos.cpp(11): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\polos.cpp(12): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\polos.cpp(13): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\polos.cpp(14): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\polos.cpp(16): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\polos.cpp(17): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\polos.cpp(18): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\polos.cpp(19): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+  Pino.cpp
+  ObjetoCompuesto.cpp
+  Objeto3D.cpp
+  Neumatico.cpp
+  Malla.cpp
+  main.cpp
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\main.cpp(425): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\main.cpp(426): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\main.cpp(427): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+  Luz.cpp
+  Llanta.cpp
+  farol.cpp
+  Esfera.cpp
+  copa2.cpp
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\copa2.cpp(38): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  copa.cpp
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\copa.cpp(40): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  Coche.cpp
+  Generando código...
+  Compilando...
+  Cara.cpp
+  Camara.cpp
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(66): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(71): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(72): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(80): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(85): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(86): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(94): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(99): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(100): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(164): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(165): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(179): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(180): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(194): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\amundo\downloads\muñeconieve_4sept\freeglut project 3d\camara.cpp(195): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  Alamo.cpp
+  abeto.cpp
+  Generando código...
+  freeglut project 3D.vcxproj -> C:\Users\amundo\Downloads\MuñecoNieve_4sept\Debug\freeglut project 3D.exe
+  freeglut project 3D.vcxproj -> C:\Users\amundo\Downloads\MuñecoNieve_4sept\Debug\freeglut project 3D.pdb (Full PDB)
