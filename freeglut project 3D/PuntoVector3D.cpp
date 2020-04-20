@@ -84,10 +84,10 @@ void PuntoVector3D::setZ(GLfloat z1) {
 // hasta aqui la carga de los nuevos valores
 //para sacar el producto numero de x, y, z, y el pv
 PuntoVector3D* PuntoVector3D::productoNumero(float a){
-        return new PuntoVector3D(x*a,y*a,z*a,pv);
+	return new PuntoVector3D(x*a,y*a,z*a,pv);
 }
 //hasta aqui
 //para la suma de vectores
 PuntoVector3D* PuntoVector3D::sumarVectores(PuntoVector3D* v){
-        return new PuntoVector3D(x + v->x,y + v->y,z + v->z,pv);
+	return new PuntoVector3D(x + v->x,y + v->y,z + v->z,pv);
 }

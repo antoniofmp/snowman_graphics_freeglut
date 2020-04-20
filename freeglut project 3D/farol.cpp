@@ -34,7 +34,5 @@ void Farol::dibuja()
 	glColor3f(1.0, 1.0, 1.0);
 	gluSphere(lampara, 1, 100, 100);
 
-	
 	glPopMatrix(); 
-
 }

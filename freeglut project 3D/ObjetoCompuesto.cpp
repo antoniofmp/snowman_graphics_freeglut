@@ -13,7 +13,6 @@ ObjetoCompuesto:: ~ObjetoCompuesto() {
 }
 
 void ObjetoCompuesto::dibuja() {
-	//To do
 	for (int i = 0; i< numHijos; i++) {
 		glMatrixMode(GL_MODELVIEW);
 		glPushMatrix();
@@ -24,7 +23,6 @@ void ObjetoCompuesto::dibuja() {
 }
 
 void ObjetoCompuesto::dibuja2() {
-	//To do
 	GLfloat previous_esp[4];
 	GLfloat esp[4] = { 0.5f, 0.5f, 0.5f, 1.0f };
 
@@ -56,7 +54,6 @@ void ObjetoCompuesto::dibuja2() {
 }
 
 void ObjetoCompuesto:: introduceObjeto(Objeto3D* objeto) {
-	//To do
 	hijos [numHijos]= objeto;
 	numHijos++;
 }

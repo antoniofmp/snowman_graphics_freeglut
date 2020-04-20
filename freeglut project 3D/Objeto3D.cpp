@@ -13,35 +13,20 @@ Objeto3D:: ~Objeto3D() {
 GLfloat* Objeto3D:: dameMatrizAfin() {
 	return matriz->dameMatrizModelado();
 }
-/*
-//To do (usando las correspondientes operaciones de TAfin)
-void Objeto3D:: traslada(PuntoVector3D* punto) {
-	//To do 
-	matriz->traslada(punto->getZ(),punto->getZ(),punto->getZ());
- //glTranslatef(punto->getX(),punto->getY(),punto->getZ());
 
-}
-*/
 void Objeto3D:: traslada(GLfloat fX,GLfloat fY,GLfloat fZ) {
-	//To do 
 	matriz->traslada(fX,fY, fZ);
-	//matriz->traslada(punto->getZ(),punto->getZ(),punto->getZ());
- //glTranslatef(punto->getX(),punto->getY(),punto->getZ());
-
 }
 
 void Objeto3D:: escala(GLfloat fX,GLfloat fY,GLfloat fZ) {
-	//To do 
 	matriz->escala(fX,fY, fZ);
 }
 
 void Objeto3D:: rota(GLfloat alfa,GLfloat fX,GLfloat fY,GLfloat fZ) {
-	//To do 
 	matriz->rota (alfa,fX,fY,fZ);
 }
 
 void Objeto3D:: mover(GLfloat fX,GLfloat fY,GLfloat fZ) {
-	//To do 
 	matriz->mover (fX,fY,fZ);
 }
 

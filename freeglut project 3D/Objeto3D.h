@@ -5,7 +5,6 @@
 #include "PuntoVector3D.h"
 #include "TAfin.h"
 
-  
 class Objeto3D {
    protected:   
 		TAfin* matriz;
@@ -14,7 +13,6 @@ class Objeto3D {
 	    Objeto3D();    
 		~Objeto3D();
 		virtual void dibuja()=0;
-		//void traslada(PuntoVector3D* punto);
 		void traslada(GLfloat fX,GLfloat fY,GLfloat fZ);
 		void escala(GLfloat fX,GLfloat fY,GLfloat fZ);
 		void rota(GLfloat alfa,GLfloat fX,GLfloat fY,GLfloat fZ);

@@ -2,8 +2,6 @@
 #include "Camara.h"
 #define PI 3.14159265358979323846
 
-//float PI= 3.14159265358979323846;
-
 Camara::Camara() {           
 	eye=new PuntoVector3D(30, 30, 30, 1);
     look=new PuntoVector3D(0, 0, 0, 1);
@@ -23,7 +21,6 @@ void Camara::setView() {
 	glMatrixMode(GL_MODELVIEW);   // VIEW
 	glLoadIdentity();
 	gluLookAt(eye->getX(),eye->getY(),eye->getZ(),look->getX(),look->getY(),look->getZ(),up->getX(),up->getY(),up->getZ());
-	//TO DO	 
 }
 
 void Camara::setCameraCoordinateSystem() {
@@ -33,21 +30,20 @@ void Camara::setCameraCoordinateSystem() {
 	u = up->productoVectorial(n);
 	u->normalizar();
 	v = n->productoVectorial(u);	
-	//TO DO	 
 }
 
 void Camara::setProjection(int i) {
 	//Define la matriz de proyección con el comando 
 	//glOrtho() o glFrustum()/gluPerspective()
-	 glMatrixMode(GL_PROJECTION);
-	 glLoadIdentity();
-		switch(i){
-			case 0: glOrtho(left,right,bottom,top,Near,Far);
-				break;
-			case 1: gluPerspective(fovy,aspect,Near,Far);
-				break;   
-        }
-	//TO DO		 
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+	
+	switch(i){
+		case 0: glOrtho(left,right,bottom,top,Near,Far);
+			break;
+		case 1: gluPerspective(fovy,aspect,Near,Far);
+			break;   
+	}
 }
 
 void Camara::setModelViewMatrix() {
@@ -62,7 +58,6 @@ void Camara::setModelViewMatrix() {
 //---------------------------------------------------------------------------------gira la camara en X
 void Camara::giraX(int i) {
 	//Gira la cámara alrededor del eje X sobre un plano perpendicular a este eje
-	//TO DO	 
 	float inc = PI/16;
 	float eyeX = eye->getX();
 	float eyeY = eye->getY();
@@ -76,7 +71,6 @@ void Camara::giraX(int i) {
 //---------------------------------------------------------------------------------gira la camara en Y
 void Camara::giraY(int i) {
 	//Gira la cámara alrededor del eje Y sobre un plano perpendicular a este eje
-	//TO DO
 	float inc = PI/16;
 	float eyeX = eye->getX();
 	float eyeY = eye->getY();
@@ -90,7 +84,6 @@ void Camara::giraY(int i) {
 //-----------------------------------------------------------------------gira en la camara en Z
 void Camara::giraZ(int i) {
 	//Gira la cámara alrededor del eje Z sobre un plano perpendicular a este eje
-	//TO DO
 	float inc =  PI/16;
 	float eyeX = eye->getX();
 	float eyeY = eye->getY();
@@ -105,7 +98,6 @@ void Camara::giraZ(int i) {
 void Camara::lateral() {
 	//Coloca la cámara de forma que se muestra una visión lateral 
 	//de la escena (desde el eje X) 
-	//TO DO
 	eye->setX(100);
 	eye->setY(0);
 	eye->setZ(0);
@@ -119,7 +111,6 @@ void Camara::lateral() {
 void Camara::frontal() {
 	//Coloca la cámara de forma que se muestra una visión frontal 
 	//de la escena (desde el eje Z) 
-	//TO DO
 	eye->setX(0);
 	eye->setY(0);
 	eye->setZ(100);
@@ -133,7 +124,6 @@ void Camara::frontal() {
 void Camara::cenital() {
     //Coloca la cámara de forma que se muestra una visión cenital 
 	//de la escena (desde el eje Y) 
-	//TO DO
 	eye->setX(0);
 	eye->setY(100);
 	eye->setZ(0);
@@ -147,7 +137,6 @@ void Camara::cenital() {
 void Camara::rincon() {
     //Coloca la cámara de forma que se muestra
 	//la escena en un rincón
-	//TO DO
 	eye->setX(30);
 	eye->setY(30);
 	eye->setZ(30);
@@ -160,7 +149,6 @@ void Camara::rincon() {
  //---------------------------------------------------------------------------giro en roll
 void Camara::roll(float ang) {
 	//Rota la cámara tal como se explica en las transparencias
-	//TO DO	
 	float s = sin(ang);
 	float c = cos(ang);
 	PuntoVector3D* nU = u->productoNumero(c)->sumarVectores(v->productoNumero(s));
@@ -175,7 +163,6 @@ void Camara::roll(float ang) {
 }
 //----------------------------------------------------------------------------------giro en yaw
 void Camara::yaw(float ang) {		
-    //TO DO
 	float s = sin(ang);
 	float c = cos(ang);
 	PuntoVector3D* nU = u->productoNumero(c)->sumarVectores(n->productoNumero(-s));
@@ -190,7 +177,6 @@ void Camara::yaw(float ang) {
 }
 //----------------------------------------------------------------------------------giro en pitch
 void Camara::pitch(float ang) {		
-    //TO DO
 	float s = sin(ang);
 	float c = cos(ang);
 	PuntoVector3D* nV = n->productoNumero(s)->sumarVectores(v->productoNumero(c));

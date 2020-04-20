@@ -6,18 +6,13 @@
 #include "ObjetoCompuesto.h"
 
 class Roble : public ObjetoCompuesto{
-        public:
-// objetos para la construccion del roble
-			//GLUquadricObj* tronco;
-			//GLUquadricObj* copa;
-// constructor y destructor del roble
-                Roble();
-                ~Roble();
-				GLfloat esp[4] = { 0.5f, 0.5f, 0.5f, 1.0f };
+	public:
+	// objetos para la construccion del roble
+	// constructor y destructor del roble
+		Roble();
+		~Roble();
+		GLfloat esp[4] = { 0.5f, 0.5f, 0.5f, 1.0f };
 				
-			  //void dibuja();
-				void especularInc();
-				void especularDes();
-
-        private:     
+		void especularInc();
+		void especularDes();
 };

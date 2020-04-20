@@ -4,18 +4,12 @@
 #include <gl/GLU.h>
 #include "Objeto3D.h"
 
-
 class Llanta : public Objeto3D{
         public:
 			GLUquadricObj* llanta1; //objeto para el tronco
 			
-//constructor y destructor
+			//constructor y destructor
 			Llanta();
 			~Llanta();
-			  void dibuja(); // para dibujar en el main.cpp
-
-        private: 
-           
-
-
+	    void dibuja(); // para dibujar en el main.cpp
 };

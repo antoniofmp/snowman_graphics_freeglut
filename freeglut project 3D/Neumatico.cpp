@@ -8,7 +8,6 @@ Neumatico::Neumatico()
 	Neumatico1=gluNewQuadric();
 
 	gluQuadricDrawStyle(Neumatico1,GLU_FILL);
-	//gluQuadricDrawStyle(llanta,GLU_POINT);
 }
 
 Neumatico::~Neumatico()
@@ -19,7 +18,6 @@ Neumatico::~Neumatico()
 void Neumatico::dibuja()
 {
 	glMatrixMode(GL_MODELVIEW);
-	//glLoadIdentity();
 	//--------------------------------------------- neumatico
 	glPushMatrix();
 	glColor3f( 0,0,0);

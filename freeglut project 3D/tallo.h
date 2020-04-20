@@ -6,16 +6,10 @@
 
 
 class tallo: public Objeto3D {
-        public:
-			GLUquadricObj* tronco; //objeto para el tronco
-			//GLUquadricObj* copa1; //objeto para la copa
-//constructor y destructor
-			tallo();
-			~tallo();
-			  void dibuja(); // para dibujar en el main.cpp
-
-        private: 
-           
-
-
+	public:
+		GLUquadricObj* tronco; //objeto para el tronco
+			//constructor y destructor
+		tallo();
+		~tallo();
+    void dibuja();
 };

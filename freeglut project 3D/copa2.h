@@ -4,21 +4,13 @@
 #include <gl/GLU.h>
 #include "Objeto3D.h"
 
-
 class copa2 : public Objeto3D{
         public:
-//objetos para el tronco y las copas
-			//GLUquadricObj* tronco;
-			//GLUquadricObj* copa;
+			//objetos para el tronco y las copas
 			GLUquadricObj* copaup;
 
-//constructor y destructor
+			//constructor y destructor
 			copa2();
 			~copa2();
-			 void dibuja();
-
-        private:     
-           
-
-
+		void dibuja();
 };

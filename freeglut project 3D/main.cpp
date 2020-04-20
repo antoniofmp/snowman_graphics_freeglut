@@ -74,7 +74,6 @@ GLdouble lookX = 0.0, lookY = 0.0, lookZ = 0.0;
 GLdouble upX = 0, upY = 1, upZ = 0;
 
 // Scene variables
-//GLfloat angX, angY, angZ;-----------------------------------------se comentaron estas porque estan arriba y serian repetidas 
 
 void buildSceneObjects() {
 	angX = 0.0f;
@@ -94,16 +93,13 @@ void buildSceneObjects() {
 	rueda = new Rueda();
 	coche = new Coche();
 
-	polos = new Polos(rInt, rExt, h);//-----------------------------------------------------cubo del coche
-
-									 //----------------------------------------------------------------------elementos de la camara
+	polos = new Polos(rInt, rExt, h);
 	gx = 0;
 	gy = 0;
 	gz = 0;
 	camara = new Camara();
 	mode = 0;
 	embaldosado = false;
-
 }
 
 void initGL() {
@@ -122,16 +118,12 @@ void initGL() {
 
 	glEnable(GL_LIGHTING);
 
-
 	//luz ambiente global
 	GLfloat d[] = { 0.7f, 0.5f, 0.5f, 1.0f };
-	//glLightfv(GL_LIGHT0, GL_DIFFUSE, d);
 	GLfloat a[] = { 1.0f, 1.0f, 1.0f, 1.0f };
 	glLightfv(GL_LIGHT0, GL_AMBIENT, a);
 	GLfloat s[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-	//glLightfv(GL_LIGHT0, GL_SPECULAR, s);
 	GLfloat p[] = { 25.0f, 25.0f, -25.0f, 1.0f };
-	//glLightfv(GL_LIGHT0, GL_POSITION, p);
 
 	//luz farola
 	GLfloat p1[] = { -6.0f, 3.0f, -10.0f, 1.0f };
@@ -142,7 +134,6 @@ void initGL() {
 	glLightfv(GL_LIGHT1, GL_AMBIENT, a1);
 	GLfloat s1[] = { 1.0f, 1.0f, 1.0f, 1.0f };
 	glLightfv(GL_LIGHT1, GL_SPECULAR, s1);
-
 
 	//componente especular
 
@@ -163,11 +154,6 @@ void initGL() {
 }
 
 void dibujarP() {
-	//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);  -----------------------no se usa
-
-	//glMatrixMode(GL_MODELVIEW);	-----------------------------------no se usa 
-	//glPushMatrix();----------------------------------------------no se usa
-
 	//luz 45º
 	GLfloat d2[] = { 0.0f, 1.0f, 0.0f, 1.0f };
 	glLightfv(GL_LIGHT2, GL_DIFFUSE, d2);
@@ -200,13 +186,6 @@ void dibujarP() {
 	glVertex3f(0, 0, 0);
 	glVertex3f(0, 0, 20);
 	glEnd();
-
-	// Drawing the scene	 		 
-	//glColor3f(1.0, 1.0, 1.0);
-	//glutSolidSphere(6, 50, 60); //Sphere: radius=6, meridians=50, parallels=60
-
-
-
 	//--------------------------------------------------------------------------------------------dibuja los arboles y objetos
 
 	glPushMatrix();
@@ -214,14 +193,9 @@ void dibujarP() {
 	alamo->dibuja();
 	pino->dibuja();
 	roble->dibuja2();
-	//luz->dibuja();
-	//rueda->dibuja();
-	esfera->dibuja();//----------------------------------------------------------esfera
-	farol->dibuja();//----------------------------------------------------------- en eje Y
-					//glPopMatrix();
-					//--------------------------------------------------------------------------------------------CUBO DEL COCHE		
+	esfera->dibuja();
+	farol->dibuja();
 	glPushMatrix();
-	//glTranslatef(-13.0 , 0.0 , 0.0);
 	glTranslatef(anguloX, 0.0f, 0.0f);
 	coche->dibuja();
 	glPopMatrix();
@@ -231,83 +205,6 @@ void dibujarP() {
 	polos->dibuja();
 	glPopMatrix();
 	glPopMatrix();
-
-	//--------------------------------------------------------------------------------------------PARA CUBO DE COCHE	
-
-	//---------------------------------------------------------- comentarlo y descomentar lo de arriba si quieres o no hijos
-	/*
-	glPushMatrix();
-	//  pintamos Hijo1  ------------------------------------------------------------------------------------1 cosas coche
-
-	//glTranslatef(anguloX, 0.0f, 0.0f);
-	Objeto3D* hijo1= new Coche();
-	hijo1->traslada(0.0 , 0.0 , 0.0);
-	//hijo1->rota(-90, 1, 0, 0);
-	hijo1->mover(anguloX, 0.0 , 0.0);
-	objeto->introduceObjeto(hijo1);
-	//objeto->dibuja();
-
-
-	//  pintamos Hijo2  ------------------------------------------------------------------------------------2 cubo coche
-
-	//glTranslatef(anguloX, 0.0f, 0.0f);
-	Objeto3D* hijo2= new Polos(rInt, rExt, h);
-	hijo2->traslada(-7.5 , 0.0 , 0.0);
-	//hijo2->rota(-90, 1, 0, 0);
-	hijo2->mover(anguloX, 0.0, 0.0);
-	objeto->introduceObjeto(hijo2);
-	//objeto->dibuja();
-
-
-	//  pintamos Hijo3  ------------------------------------------------------------------------------------3 pino
-
-	Objeto3D* hijo3= new Pino();
-	//hijo3->traslada(7.5, 0, 7.5);
-	//hijo3->rota(-90, 1, 0, 0);
-	objeto->introduceObjeto(hijo3);
-	//objeto->dibuja();
-
-	//  pintamos Hijo4  ------------------------------------------------------------------------------------4 roble
-
-	Objeto3D* hijo4= new Roble();
-	//hijo4->traslada(7.5, 0, 7.5);
-	//hijo4->rota(-90, 1, 0, 0);
-	objeto->introduceObjeto(hijo4);
-	//objeto->dibuja();
-
-	//  pintamos  Hijo5    ---------------------------------------------------------------------------------5 alamo
-	Objeto3D* hijo5= new Alamo();
-	//hijo1->traslada(0, 0, 0);
-	//hijo1->rota(-90, 1, 0, 0);
-	//hijo1->escala (2,2,2);
-	objeto->introduceObjeto(hijo5);
-	//objeto->dibuja();
-
-	//  pintamos Hijo6 ------------------------------------------------------------------------------------6 abeto
-
-	Objeto3D* hijo6= new Abeto();
-	//hijo6->traslada(7.5, 0, 7.5);
-	//hijo6->rota(-90, 1, 0, 0);
-	objeto->introduceObjeto(hijo6);
-	//objeto->dibuja();
-
-	//  pintamos Hijo7  ------------------------------------------------------------------------------------7 farol
-
-	Objeto3D* hijo7= new Farol();
-	hijo7->traslada(8, 0, -3.5);
-	//hijo7->rota(-90, 1, 0, 0);
-	objeto->introduceObjeto(hijo7);
-	//objeto->dibuja();
-
-	//  pintamos Hijo8  ------------------------------------------------------------------------------------8 esfera
-
-	Objeto3D* hijo8= new Esfera();
-	//hijo8->traslada(7.5, 0, 7.5);
-	//hijo8->rota(-90, 1, 0, 0);
-	objeto->introduceObjeto(hijo8);
-	objeto->dibuja();
-	glPopMatrix();//---------------------------------pop matrix para el push inicial donde estan los hijos
-	*/
 }
 
 //--------------------------------------------------------------------metodo para embaldosar las 4 camaras
@@ -351,10 +248,7 @@ void display(void) {
 	if (embaldosado) embaldosar(2); //-----------------------------------para usar el modo embaldosar
 	else {
 		dibujarP();
-
-
 	}
-
 
 	glPopMatrix();
 
